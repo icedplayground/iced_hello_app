@@ -4,29 +4,33 @@ use iced::widget::{center, text};
 use iced::{Element, Result, Task};
 use iced::application;
 
+#[allow(non_camel_case_types)]
 #[derive(Default)]
-struct MY_ICED_HELLO_WORLD;
+struct MY_ICED_HELLO_WORLD_STRUCT;
 
 #[derive(Debug, Clone, Copy)]
 enum Message {}
 
+// fn main
 fn main() -> Result {
-    application(MY_ICED_HELLO_WORLD::title, MY_ICED_HELLO_WORLD::update, MY_ICED_HELLO_WORLD::view)
-        .run_with(|| (MY_ICED_HELLO_WORLD::default(), Task::none()))
+    application(MY_ICED_HELLO_WORLD_STRUCT::title, MY_ICED_HELLO_WORLD_STRUCT::update, MY_ICED_HELLO_WORLD_STRUCT::view)
+        .run_with(|| (MY_ICED_HELLO_WORLD_STRUCT::default(), Task::none()))
 }
 
-// Title: takes &MY_ICED_HELLO_WORLD
-impl MY_ICED_HELLO_WORLD {
+// impl
+impl MY_ICED_HELLO_WORLD_STRUCT {
+    
+    // fn title
     fn title(&self) -> String {
         String::from("Iced • Hello")
     }
 
-    // Update: takes &mut MY_ICED_HELLO_WORLD and a Message, returns Task<Message>
+    // fn update
     fn update(&mut self, _message: Message) -> Task<Message> {
         Task::none()
     }
 
-    // View: takes &MY_ICED_HELLO_WORLD, returns Element<Message>
+    // fn view
     fn view(&self) -> Element<'_, Message> {
         center(text("Hello, world!")).into()
     }
