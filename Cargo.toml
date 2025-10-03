@@ -1,7 +1,8 @@
+# 🧊 iced_hello_app
 [package]
 name = "iced_hello_app"
 version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-iced = { version = "0.13", features = ["wgpu"] }
+iced = "0.13.1"
