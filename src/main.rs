@@ -33,7 +33,7 @@ impl MY_ICED_HELLO_WORLD_STRUCT {
     
     // fn title
     fn title(&self) -> String {
-        String::from("Iced • Hello")
+        String::from("👋 Iced • Hello")
     }
 
     // fn update
