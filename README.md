@@ -3,6 +3,8 @@
  
 ![Imgur](https://imgur.com/jfJLQVV.png)
 
+> i didn't want to make anything more comlicated than a window with text that says "Hello, world!"
+
 ---
 
 # Development
@@ -11,6 +13,7 @@ running and building
 ```sh
 cargo run
 cargo check
+cargo test
 cargo clean
 ```
 
