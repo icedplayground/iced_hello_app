@@ -46,3 +46,7 @@ impl MY_ICED_HELLO_WORLD_STRUCT {
         center(text("Hello, world!")).into()
     }
 }
+
+
+// ==================================
+// copyright 2025 by nonresistant.near
