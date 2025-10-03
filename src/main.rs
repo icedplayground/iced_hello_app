@@ -1,19 +1,20 @@
 // 🧊 iced_hello_app
 // src/main.rs
+use iced::application;
 use iced::widget::{center, text};
 use iced::{Element, Result, Task};
-use iced::application;
-
 
 // ============================== //
 
-
 // fn main
 fn main() -> Result {
-    application(MY_ICED_HELLO_WORLD_STRUCT::title, MY_ICED_HELLO_WORLD_STRUCT::update, MY_ICED_HELLO_WORLD_STRUCT::view)
-        .run_with(|| (MY_ICED_HELLO_WORLD_STRUCT::default(), Task::none()))
+    application(
+        MY_ICED_HELLO_WORLD_STRUCT::title,
+        MY_ICED_HELLO_WORLD_STRUCT::update,
+        MY_ICED_HELLO_WORLD_STRUCT::view,
+    )
+    .run_with(|| (MY_ICED_HELLO_WORLD_STRUCT::default(), Task::none()))
 }
-
 
 // ============================== //
 // iced magic happens here
@@ -30,7 +31,6 @@ enum Message {}
 
 // impl
 impl MY_ICED_HELLO_WORLD_STRUCT {
-    
     // fn title
     fn title(&self) -> String {
         String::from("👋 Iced • Hello")
@@ -46,7 +46,6 @@ impl MY_ICED_HELLO_WORLD_STRUCT {
         center(text("Hello, world!")).into()
     }
 }
-
 
 // ==================================
 // copyright 2025 by nonresistant.near
