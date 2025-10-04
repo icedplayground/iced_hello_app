@@ -1,50 +1,75 @@
 // 🧊 iced_hello_app
 // src/main.rs
-use iced::application;
-use iced::widget::{center, text};
-use iced::{Element, Result, Task};
+use iced::widget::{button, center, column, text};
+use iced::{Element, Task};
 
 // ============================== //
 
-// fn main
-fn main() -> Result {
-    application(
-        MY_ICED_HELLO_WORLD_STRUCT::title,
-        MY_ICED_HELLO_WORLD_STRUCT::update,
-        MY_ICED_HELLO_WORLD_STRUCT::view,
-    )
-    .run_with(|| (MY_ICED_HELLO_WORLD_STRUCT::default(), Task::none()))
+// The message defines any events or interactions that your program will care about.
+#[derive(Debug, Clone, Copy)]
+enum Message {
+    ButtonPressed,
 }
-
-// ============================== //
-// iced magic happens here
 
 // struct - important for state
 #[allow(non_camel_case_types)]
 #[derive(Default)]
-struct MY_ICED_HELLO_WORLD_STRUCT;
+struct MY_ICED_HELLO_WORLD_STRUCT {
+    button_text: String,
+}
 
-// enum
-// The message defines any events or interactions that your program will care about.
-#[derive(Debug, Clone, Copy)]
-enum Message {}
+// fn main
+#[cfg(not(target_arch = "wasm32"))]
+fn main() -> iced::Result {
+    use iced::application;
+    application(
+        "👋 Iced • Hello",
+        update,
+        view,
+    )
+    .run()
+}
 
-// impl
-impl MY_ICED_HELLO_WORLD_STRUCT {
-    // fn title
-    fn title(&self) -> String {
-        String::from("👋 Iced • Hello")
+#[cfg(target_arch = "wasm32")]
+fn main() -> iced::Result {
+    // For web target, Iced should work with the same application function
+    iced::application(
+        "👋 Iced • Hello",
+        update,
+        view,
+    )
+    .run()
+}
+
+// Update function
+fn update(state: &mut MY_ICED_HELLO_WORLD_STRUCT, message: Message) -> Task<Message> {
+    match message {
+        Message::ButtonPressed => {
+            state.button_text = "Button was pressed!".to_string();
+            Task::none()
+        }
     }
+}
 
-    // fn update
-    fn update(&mut self, _message: Message) -> Task<Message> {
-        Task::none()
-    }
+// View function
+fn view(state: &MY_ICED_HELLO_WORLD_STRUCT) -> Element<'_, Message> {
+    let current_text = if state.button_text.is_empty() {
+        "Hello, world!"
+    } else {
+        &state.button_text
+    };
 
-    // fn view
-    fn view(&self) -> Element<'_, Message> {
-        center(text("Hello, world!")).into()
-    }
+    let button_widget = button(text("Click me!"))
+        .on_press(Message::ButtonPressed);
+
+    center(
+        column![
+            text(current_text),
+            button_widget,
+        ]
+        .spacing(10)
+    )
+    .into()
 }
 
 // ==================================

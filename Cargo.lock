@@ -1443,6 +1443,7 @@ name = "iced_hello_app"
 version = "0.1.0"
 dependencies = [
  "iced",
+ "wasm-bindgen-futures",
 ]
 
 [[package]]
