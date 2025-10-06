@@ -1,6 +1,6 @@
-# 🧊 {{project-name}}
+# 🧊 {{project-name-kebab}}
 [package]
-name = "{{project-name}}"
+name = "{{project-name-kebab}}"
 version = "0.1.0"
 edition = "2024"
 

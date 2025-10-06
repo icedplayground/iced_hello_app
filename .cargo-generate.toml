@@ -1,7 +1,7 @@
 [template]
 # Define the variables that will be prompted during generation
 required = [
-    "project-name",
+    "project-name-kebab",
     "project-display-name", 
     "project-description",
     "project-author",
@@ -10,9 +10,9 @@ required = [
 ]
 
 # Define default values for template variables
-[placeholders.project-name]
+[placeholders.project-name-kebab]
 type = "string"
-prompt = "Project name (will be used as crate name)"
+prompt = "Project name (will be used as crate name, in kebab-case)"
 default = "iced-app"
 
 [placeholders.project-display-name]

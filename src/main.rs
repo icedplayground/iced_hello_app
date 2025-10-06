@@ -1,4 +1,4 @@
-// 🧊 {{project-name}}
+// 🧊 {{project-name-kebab}}
 // src/main.rs
 use iced::application;
 use iced::widget::{center, text};
