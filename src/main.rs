@@ -1,4 +1,4 @@
-// 🧊 iced_hello_app
+// 🧊 {{project-name}}
 // src/main.rs
 use iced::application;
 use iced::widget::{center, text};
@@ -9,11 +9,11 @@ use iced::{Element, Result, Task};
 // fn main
 fn main() -> Result {
     application(
-        MY_ICED_HELLO_WORLD_STRUCT::title,
-        MY_ICED_HELLO_WORLD_STRUCT::update,
-        MY_ICED_HELLO_WORLD_STRUCT::view,
+        {{project-struct-name}}::title,
+        {{project-struct-name}}::update,
+        {{project-struct-name}}::view,
     )
-    .run_with(|| (MY_ICED_HELLO_WORLD_STRUCT::default(), Task::none()))
+    .run_with(|| ({{project-struct-name}}::default(), Task::none()))
 }
 
 // ============================== //
@@ -22,7 +22,7 @@ fn main() -> Result {
 // struct - important for state
 #[allow(non_camel_case_types)]
 #[derive(Default)]
-struct MY_ICED_HELLO_WORLD_STRUCT;
+struct {{project-struct-name}};
 
 // enum
 // The message defines any events or interactions that your program will care about.
@@ -30,10 +30,10 @@ struct MY_ICED_HELLO_WORLD_STRUCT;
 enum Message {}
 
 // impl
-impl MY_ICED_HELLO_WORLD_STRUCT {
+impl {{project-struct-name}} {
     // fn title
     fn title(&self) -> String {
-        String::from("👋 Iced • Hello")
+        String::from("👋 Iced • {{project-display-name}}")
     }
 
     // fn update
@@ -48,4 +48,4 @@ impl MY_ICED_HELLO_WORLD_STRUCT {
 }
 
 // ==================================
-// copyright 2025 by nonresistant.near
+// copyright 2025 by {{project-author}}

@@ -1,14 +1,30 @@
-# iced_hello_app
- a simple hello world iced window
- 
-![Imgur](https://imgur.com/jfJLQVV.png)
+# Iced Application Template
 
-> i didn't want to make anything more comlicated than a window with text that says "Hello, world!"
+This is a template for creating new Iced applications using `cargo generate`.
 
----
+## Using this template
 
-# Development
-running and building
+To create a new project from this template, first install `cargo-generate`:
+
+```sh
+cargo install cargo-generate
+```
+
+Then generate a new project:
+
+```sh
+cargo generate --git https://github.com/your-username/your-repo-name.git --name my-iced-app
+```
+
+Or if you're using this local template:
+
+```sh
+cargo generate --path /path/to/this/template --name my-iced-app
+```
+
+## Development
+
+After generating your project, you can run and build using standard Cargo commands:
 
 ```sh
 cargo run
@@ -17,14 +33,20 @@ cargo test
 cargo clean
 ```
 
-cargo bundle (here for sample)
+### Bundling
+
+To create a bundled application:
+
 ```sh
-# cargo install cargo-bundle
-# https://github.com/burtonageo/cargo-bundle
+# Install cargo-bundle if not already installed
+cargo install cargo-bundle
+
+# Bundle for release
 cargo bundle --release
 ```
 
-cargo build (here for sample)
+### Building for different targets
+
 ```sh
 # wasm32-unknown-unknown
 rustup target add wasm32-unknown-unknown
@@ -35,7 +57,6 @@ rustup target add aarch64-apple-darwin
 cargo build --release --locked --target=aarch64-apple-darwin
 ```
 
-
 ---
 
-copyright 2025 by nonresistant.near
+copyright 2025 by {{project-author}}

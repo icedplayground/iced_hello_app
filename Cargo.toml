@@ -1,18 +1,18 @@
-# 🧊 iced_hello_app
+# 🧊 {{project-name}}
 [package]
-name = "iced_hello_app"
+name = "{{project-name}}"
 version = "0.1.0"
 edition = "2024"
 
 # cargo-bundle
 [package.metadata.bundle]
-name = "HELLO"
-identifier = "app.sleet.hello"
+name = "{{project-display-name}}"
+identifier = "{{bundle-identifier}}"
 icon = ["icons/icon.icns"]
 version = "0.1.0"
-copyright = "COPYRIGHT (c) 2025 SLEET.NEAR"
+copyright = "COPYRIGHT (c) 2025 {{project-author}}"
 category = "public.app-category.utilities"
-short_description = "a hello iced project by sleet"
+short_description = "{{project-description}}"
 
 
 # dependencies
@@ -22,4 +22,4 @@ iced = "0.13.1"
 
 
 # ==================================
-# copyright 2025 by nonresistant.near
+# copyright 2025 by {{project-author}}

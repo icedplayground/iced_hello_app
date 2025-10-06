@@ -1,0 +1,7 @@
+# Files and directories to ignore during template generation
+.git/
+target/
+dist/
+Cargo.lock
+*.log
+.DS_Store

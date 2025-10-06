@@ -1,0 +1,41 @@
+[template]
+# Define the variables that will be prompted during generation
+required = [
+    "project-name",
+    "project-display-name", 
+    "project-description",
+    "project-author",
+    "bundle-identifier",
+    "project-struct-name"
+]
+
+# Define default values for template variables
+[placeholders.project-name]
+type = "string"
+prompt = "Project name (will be used as crate name)"
+default = "iced-app"
+
+[placeholders.project-display-name]
+type = "string"
+prompt = "Project display name"
+default = "Iced App"
+
+[placeholders.project-description]
+type = "string"
+prompt = "Project description"
+default = "A new Iced application"
+
+[placeholders.project-author]
+type = "string"
+prompt = "Author name"
+default = "Your Name"
+
+[placeholders.bundle-identifier]
+type = "string"
+prompt = "Bundle identifier (e.g., com.yourname.appname)"
+default = "com.example.icedapp"
+
+[placeholders.project-struct-name]
+type = "string"
+prompt = "Main struct name (for the Iced application state)"
+default = "IcedApp"
