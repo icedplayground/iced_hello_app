@@ -9,6 +9,22 @@ required = [
     "project-struct-name"
 ]
 
+# Only process files with these extensions as templates
+include = [
+    "*.toml",
+    "*.rs",
+    "*.md",
+    "*.sh",
+    "*.yaml",
+    "*.yml",
+    "*.json",
+    "*.xml",
+    "*.html",
+    "*.css",
+    "*.js",
+    "*.ts"
+]
+
 [placeholders.project-name-kebab]
 type = "string"
 prompt = "Project name (will be used as crate name, in kebab-case)"
@@ -38,18 +54,3 @@ default = "com.example.icedapp"
 type = "string"
 prompt = "Main struct name (for the Iced application state)"
 default = "IcedApp"
-
-# Configuration for files to exclude from templating (binary files that should be copied as-is)
-[template-files]
-exclude = [
-    "icons/icon.icns",
-    "icons/icon.png",
-    "icons/icon.iconset/icon_16x16.png",
-    "icons/icon.iconset/icon_16x16@2x.png",
-    "icons/icon.iconset/icon_32x32.png",
-    "icons/icon.iconset/icon_32x32@2x.png",
-    "icons/icon.iconset/icon_128x128.png",
-    "icons/icon.iconset/icon_128x128@2x.png",
-    "icons/icon.iconset/icon_256x256.png",
-    "icons/icon.iconset/icon_256x256@2x.png",
-]
