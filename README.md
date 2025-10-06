@@ -1,30 +1,11 @@
-# Iced Application Template
+# {{project-name-kebab}}
+{{project-description}}
 
-This is a template for creating new Iced applications using `cargo generate`.
 
-## Using this template
+---
 
-To create a new project from this template, first install `cargo-generate`:
-
-```sh
-cargo install cargo-generate
-```
-
-Then generate a new project:
-
-```sh
-cargo generate --git https://github.com/your-username/your-repo-name.git --name my-iced-app
-```
-
-Or if you're using this local template:
-
-```sh
-cargo generate --path /path/to/this/template --name my-iced-app
-```
-
-## Development
-
-After generating your project, you can run and build using standard Cargo commands:
+# Development
+running and building
 
 ```sh
 cargo run
@@ -33,20 +14,14 @@ cargo test
 cargo clean
 ```
 
-### Bundling
-
-To create a bundled application:
-
+cargo bundle (here for sample)
 ```sh
-# Install cargo-bundle if not already installed
-cargo install cargo-bundle
-
-# Bundle for release
+# cargo install cargo-bundle
+# https://github.com/burtonageo/cargo-bundle
 cargo bundle --release
 ```
 
-### Building for different targets
-
+cargo build (here for sample)
 ```sh
 # wasm32-unknown-unknown
 rustup target add wasm32-unknown-unknown
@@ -56,6 +31,7 @@ cargo build --target wasm32-unknown-unknown
 rustup target add aarch64-apple-darwin
 cargo build --release --locked --target=aarch64-apple-darwin
 ```
+
 
 ---
 
