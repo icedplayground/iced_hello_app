@@ -26,8 +26,9 @@ struct MY_ICED_HELLO_WORLD_STRUCT;
 
 // enum
 // The message defines any events or interactions that your program will care about.
+#[allow(non_camel_case_types)]
 #[derive(Debug, Clone, Copy)]
-enum Message {}
+enum MY_ICED_HELLO_WORLD_MESSAGE_ENUM {}
 
 // impl
 impl MY_ICED_HELLO_WORLD_STRUCT {
@@ -37,12 +38,12 @@ impl MY_ICED_HELLO_WORLD_STRUCT {
     }
 
     // fn update
-    fn update(&mut self, _message: Message) -> Task<Message> {
+    fn update(&mut self, _message: MY_ICED_HELLO_WORLD_MESSAGE_ENUM) -> Task<MY_ICED_HELLO_WORLD_MESSAGE_ENUM> {
         Task::none()
     }
 
     // fn view
-    fn view(&self) -> Element<'_, Message> {
+    fn view(&self) -> Element<'_, MY_ICED_HELLO_WORLD_MESSAGE_ENUM> {
         center(text("Hello, world!")).into()
     }
 }
