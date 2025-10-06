@@ -9,7 +9,6 @@ required = [
     "project-struct-name"
 ]
 
-# Define default values for template variables
 [placeholders.project-name-kebab]
 type = "string"
 prompt = "Project name (will be used as crate name, in kebab-case)"
