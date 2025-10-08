@@ -27,7 +27,8 @@ cargo bundle --release
 cargo build (here for sample)
 ```sh
 # wasm32-unknown-unknown
-rustup target add wasm32-unknown-unknown
+# rustup target add wasm32-unknown-unknown
+cargo check --target wasm32-unknown-unknown
 cargo build --target wasm32-unknown-unknown
 
 # aarch64-apple-darwin
