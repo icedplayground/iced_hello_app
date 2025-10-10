@@ -17,8 +17,7 @@ short_description = "a hello iced project by sleet"
 
 # dependencies
 [dependencies]
-iced = "0.13.1"
-
+iced = { version = "0.13.1", features = ["system"] }
 
 
 # ==================================
