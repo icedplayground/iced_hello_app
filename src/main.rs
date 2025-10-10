@@ -2,7 +2,7 @@
 // src/main.rs
 use iced::application;
 use iced::widget::{center, text};
-use iced::{Element, Result, Task};
+use iced::{Element, Result, Task, Theme};
 
 // ============================== //
 
@@ -13,6 +13,7 @@ fn main() -> Result {
         MY_ICED_HELLO_WORLD_STRUCT::update,
         MY_ICED_HELLO_WORLD_STRUCT::view,
     )
+    .theme(|_| Theme::GruvboxLight)
     .run_with(|| (MY_ICED_HELLO_WORLD_STRUCT::default(), Task::none()))
 }
 
